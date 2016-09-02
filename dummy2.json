@@ -1,0 +1,135 @@
+{
+  "tiles": [
+    {
+      "tileName": "Tile1",
+      "channelid": [
+        101,
+        102
+      ],
+      "id": 1,
+      "row": 2,
+      "colour": "#AB2567",
+      "column": 2
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Tile 2",
+      "row": 2,
+      "column": 2,
+      "colour": "#AB2567",
+      "id": 2
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Tile 3",
+      "row": 3,
+      "column": 3,
+      "colour": "red",
+      "id": 3
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Tile 4",
+      "row": 3,
+      "column": 3,
+      "colour": "green",
+      "id": 4
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Large",
+      "row": 2,
+      "column": 4,
+      "colour": "gray",
+      "id": 5
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Small",
+      "row": 2,
+      "column": 2,
+      "colour": "red",
+      "id": 6
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Ashish",
+      "row": 3,
+      "column": 3,
+      "colour": "#red",
+      "id": 7
+    },
+    {
+      "channelid": [
+        "abc"
+      ],
+      "tileName": "Muthu",
+      "row": 3,
+      "column": 3,
+      "colour": "red",
+      "id": 8
+    }
+  ],
+  "channelMsg": [
+    {
+      "channelid": 101,
+      "msg": [
+        "ram",
+        "hassan",
+        "vikky"
+      ]
+    },
+    {
+      "channelid": 102,
+      "msg": [
+        "ram1",
+        "hassan1",
+        "vikky1"
+      ]
+    },
+    {
+      "channelid": 103,
+      "msg": [
+        "ram2",
+        "hassan2",
+        "vikky2"
+      ]
+    },
+    {
+      "channelid": 104,
+      "msg": [
+        "ram3",
+        "hassan3",
+        "vikky3"
+      ]
+    },
+    {
+      "channelid": 105,
+      "msg": [
+        "ranjani",
+        "murugan",
+        "mohan"
+      ]
+    },
+    {
+      "channelid": 106,
+      "msg": [
+        "ram3",
+        "hassan3",
+        "deepak"
+      ]
+    }
+  ]
+}

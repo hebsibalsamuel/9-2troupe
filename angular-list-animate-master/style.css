@@ -1,0 +1,35 @@
+.tile {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: palevioletred;
+}
+
+.message {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 5s;
+}
+
+.message.ng-enter,.message.ng-move{
+    left: 100%;
+    /*opacity: 0;*/
+}
+
+.message.ng-enter.ng-enter-active,
+.message.ng-move.ng-move-active{
+    /*animation: slider 5s;*/
+    /*opacity: 1;*/
+    left: 0%;
+}
+
+/*.message.ng-leave {
+    opacity: 0;
+}*/
+
+.message.ng-leave-active {
+    opacity: 0;
+    transition: opacity 2s;
+
+}

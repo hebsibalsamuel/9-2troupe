@@ -1,0 +1,21 @@
+
+<p>Select a Project:</p>
+<md-content>
+<md-autocomplete
+         ng-disabled="isDisabled"
+         md-no-cache="noCache"
+         md-selected-item="selectedItem"
+         md-search-text="searchText"
+         md-items="item in searchTextChange(searchText)"
+         md-item-text="item.project"
+         md-min-length="1"
+         placeholder="Project">
+       <md-item-template>
+         <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.project}}</span>
+       </md-item-template>
+       <md-not-found>
+         No locations matching "{{searchText}}" were found.
+       </md-not-found>
+     </md-autocomplete>
+     </md-content>
+     <br/>

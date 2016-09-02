@@ -1,0 +1,95 @@
+{"users":[
+            {
+              "id": 1,
+              "userName": "SoumyaBhar19",
+              "userId": "1",
+              "status": "on",
+              "userPic": "f2.jpg"
+            },
+          
+            {
+              "id": 9,
+              "userName": "SandhayaKumari",
+              "userId": "2",
+              "status": "on",
+              "userPic": "f3.jpg"
+            },
+            {
+              "id": 10,
+              "userName": "Ashish@singh",
+              "userId": "3",
+              "status": "off",
+              "userPic": "f4.jpg"
+            },
+            {
+              "id": 11,
+              "userName": "ezhil11",
+              "userId": "4",
+              "status": "on",
+              "userPic": "f5.jpg"
+            },
+            {
+              "id": 12,
+              "userName": "Gourav@MATTA",
+              "userId": "5",
+              "status": "on",
+              "userPic": "f6.jpg"
+            },
+            {
+              "id": 13,
+              "userName": "Teja@Krishna",
+              "userId": "6",
+              "status": "on",
+              "userPic": "f7.jpg"
+            },
+            {
+              "id": 14,
+              "userName": "Monika10Singh",
+              "userId": "7",
+              "status": "on",
+              "userPic": "f8.jpg"
+            },
+            {
+              "id": 15,
+              "userName": "RitikaGupta10",
+              "userId": "8",
+              "status": "off",
+              "userPic": "f2.jpg"
+            },
+            {
+              "id": 16,
+              "userName": "AnmolRaichanda15",
+              "userId": "9",
+              "status": "on",
+              "userPic": "f3.jpg"
+            },
+            {
+              "id": 17,
+              "userName": "LuvpreetKaur",
+              "userId": "10",
+              "status": "on",
+              "userPic": "f4.jpg"
+            },
+            {
+              "id": 18,
+              "userName": "AprajitaGautam11",
+              "userId": "11",
+              "status": "off",
+              "userPic": "f5.jpg"
+            },
+            {
+              "id": 19,
+              "userName": "AshishVemula11",
+              "userId": "12",
+              "status": "on",
+              "userPic": "f6.jpg"
+            },
+            {
+              "id": 20,
+              "userName": "Abhinav@Mittal",
+              "userId": "13",
+              "status": "on",
+              "userPic": "f7.jpg"
+            }
+          ]
+}

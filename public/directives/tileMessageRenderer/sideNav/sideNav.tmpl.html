@@ -1,0 +1,17 @@
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-xl')" md-whiteframe="12" md-disable-backdrop>
+  <md-list  style="height:95%;" ng-scrollbar scrollbar-x="true" scrollbar-y="true" scrollbar-config="{show:true, autoResize:true, dragSpeed: 1.2}">
+    <md-subheader class="md-no-sticky">Online users</md-subheader>
+    <md-list-item ng-repeat="arr in onlineArr" ng-click="test(arr.userName)">
+      <img alt="{{arr.userName}}" ng-src="images/{{arr.userPic}}" class="md-avatar" />
+      <p>{{arr.userName}}</p>
+      <div class="{{arr.class}}"></div>
+    </md-list-item>
+
+    <md-subheader class="md-no-sticky">Offline users</md-subheader>
+    <md-list-item ng-repeat="arr in offlineArr" ng-click="test(arr.userName)">
+      <img alt="{{arr.userName}}" ng-src="images/{{arr.userPic}}" class="md-avatar" />
+      <p>{{ arr.userName }}</p>
+      <div class="{{arr.class}}"></div>
+    </md-list-item>
+  </md-list>
+</md-sidenav>

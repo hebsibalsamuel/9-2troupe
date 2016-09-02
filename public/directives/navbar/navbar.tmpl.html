@@ -1,0 +1,69 @@
+<!-- <md-content class="navBar"> -->
+  <md-toolbar class= " md-hue-2 ">
+    <div class="md-toolbar-tools ">
+      <md-button class="md-icon-button " aria-label="Settings" ng-click="toggleLeft()">
+          <img src="images/menu-white-24px.svg"></img>
+        </md-button>
+      <h2>
+        <span><a href="index1.html?name=Ezhil">Troupe</a></span>
+      </h2>
+      <span flex></span>
+     <md-menu-bar>
+      <md-menu>
+        <md-button aria-label="add" class="md-icon-button" ng-click="$mdOpenMenu()">
+         <md-icon md-svg-icon="images/add-white-24px.svg"></md-icon>
+        </md-button>
+        <md-menu-content>
+          <md-menu-item>
+            <md-button aria-label="create New project" ng-click="createProject($event)">
+             <md-icon class="projbutton" md-svg-src="images/project.svg"></md-icon>New Project
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button aria-label="create New channel" ng-click="createChannel($event)">
+             <md-icon class="projbutton" md-svg-src="images/project.svg"></md-icon>New channel
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button aria-label="create New channel" ng-click="showCustom($event)">
+             <md-icon class="projbutton" md-svg-src="images/project.svg"></md-icon>New Tile
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+     </md-menu-bar>
+
+      <md-button aria-label="notification" class="md-icon-button">
+        <md-icon md-svg-icon="images/notification-white-24px.svg"></md-icon>
+      </md-button>
+      <md-menu-bar md-position-mode="target-right target">
+         <md-menu>
+           <md-button aria-label="profile" class="md-icon-button"  ng-click="$mdOpenMenu($event)">
+             <md-icon md-svg-icon="images/profile-white-24px.svg"></md-icon>
+           </md-button>
+           <md-menu-content width="3">
+             <md-menu-item>
+               <md-button>
+                <!-- <a href="#/editProfile"><span>Profile</span></a> -->
+                <a ui-sref="editProfile">profile</a></li>
+               </md-button>
+             </md-menu-item>
+
+             <md-menu-item>
+               <md-button>
+                <span>Settings</span>
+               </md-button>
+             </md-menu-item>
+     <md-menu-divider></md-menu-divider>
+             <md-menu-item>
+               <md-button>
+                  <span>Logout</span>
+               </md-button>
+             </md-menu-item>
+
+           </md-menu-content>
+             </md-menu>
+           </md-menu-bar>
+    </div>
+  </md-toolbar>
+<!-- </md-content> -->

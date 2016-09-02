@@ -1,0 +1,50 @@
+<div layout="column" class="channel-fix">
+  <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>
+          {{ch}}
+        </span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="addPeople()">
+        <md-icon md-svg-src="images/add-white-24px.svg"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button">
+        <md-icon md-svg-src="images/settings-white-24px.svg"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <div class="red message-list" scroll-glue="glued">
+    <div ng-repeat="message in messages" on-finish-render="highlightSnippet">
+      <message-card  message="message"></message-card>
+    </div>
+  </div>
+  <div class="message-controls" layout="row">
+    <md-menu-bar class="addfile">
+      <md-menu>
+        <md-button aria-label="add" class="md-icon-button addsnippet" ng-click="$mdOpenMenu()" style="background:gray;">
+         <md-icon md-svg-icon="images/add-white-24px.svg"></md-icon>
+        </md-button>
+        <md-menu-content>
+          <md-menu-item>
+            <md-button aria-label="create New project" ng-click="createProject($event)">
+             <md-icon class="projbutton" md-svg-src="images/project.svg"></md-icon>Upload a File
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button aria-label="create New channel" ng-click="createChanne($event)">
+             <md-icon class="projbutton" md-svg-src="images/project.svg"></md-icon>Add Snippet
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+     </md-menu-bar>
+    <md-input-container class="message-textarea-fix" name="typedMessage" md-no-float flex >
+        <textarea type="text" ng-model="typedMessage" placeholder="Write something..." rows="1" ng-keypress="checkIfEnterKeyWasPressed($event,typedMessage)"></textarea>
+    </md-input-container>
+    <md-button class="md-icon-button emoji" aria-label="emoji" ng-click="createCh($event)" >
+      <md-icon md-svg-src="images/emoticon-black-24px.svg"></md-icon>
+    </md-button>
+  </div>
+</div>

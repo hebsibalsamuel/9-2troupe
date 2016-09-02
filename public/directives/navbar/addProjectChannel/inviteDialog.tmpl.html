@@ -1,0 +1,36 @@
+<md-dialog aria-label="Invite New Members" ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Invite New Members</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+          <md-icon md-svg-icon="images/cancel-white-24px.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <p>Thank you for creating a project</p>
+        <p>New members will automatically join in General channel<p>
+          <form name="invite">
+            <div>
+            <md-input-container class="md-block">
+              <label>Email</label>
+              <input type="email" name="email" ng-model="email" required >
+              <div ng-messages="invite.email.$error">
+                <div ng-message="required">This is required.</div>
+              </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>User Name</label>
+              <input name="userName" ng-model="userName" placeholder="(optional)">
+            </md-input-container>
+          </div>
+            <md-button class="md-primary md-raised" aria-label="Add people" ng-click="addMembers()">Add
+            </md-button>
+            <md-button class="md-primary md-raised" aria-label="Add people" ng-click="addMoreMembers()">Add More
+            </md-button>
+          </form>
+      </div>
+  </md-dialog-content>
+</md-dialog>

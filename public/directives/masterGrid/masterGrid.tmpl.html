@@ -1,0 +1,22 @@
+<div class="grid-list" scroll-glue="glued">
+  <md-grid-list md-cols="6" md-row-height="1:1" >
+
+  <!-- <md-grid-tile class="tileadd" md-colspan="2" md-rowspan="2" style="background:gray">
+           <md-button class="md-fab md-primary" aria-label="create new tile" ng-click="showCustom($event)">
+                <md-icon class="material-icons">add</md-icon>
+           </md-button>
+    </md-grid-tile> -->
+
+    <md-grid-tile class="tile" ng-repeat="msg in msg" ng-drop="true" ng-drop-success="onDropComplete($index,$data,$event)" md-colspan="{{msg.column}}" md-rowspan="{{msg.row}}" style="background:{{msg.colour}}">
+      <div class="slideTextUp" ng-drag="true" ng-drag-data="msg"  >
+          <tile-message-renderer tile-name={{msg.id}} tile-channel={{msg.channelid}}></tile-message-renderer>
+          <md-grid-tile-header class="tilename" layout="row">
+              <label>{{msg.tileName}}</label>
+              <md-button class="md-icon-button" ng-click="showEdit(msg.tileName,msg.colour,msg.column,msg.id)">
+               <i class="material-icons">mode_edit</i>
+              </md-button>
+          </md-grid-tile-header>
+      </div>
+    </md-grid-tile>
+  </md-grid-list>
+</div>

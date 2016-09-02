@@ -1,0 +1,43 @@
+<md-dialog aria-label="Create New channel" ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Create New channel</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+          <md-icon md-svg-icon="images/cancel-white-24px.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+          <form name="channelForm">
+            <md-input-container>
+               <label>Projects</label>
+               <md-select required name="projectName" ng-model="selectedProject" md-selected-text="getSelectedText()">
+                 <md-optgroup label="projects">
+                   <md-option ng-value="project.projectName" ng-repeat="project in projects">{{project.projectName}}</md-option>
+                 </md-optgroup>
+               </md-select>
+               <div ng-messages="channelForm.projectName.$error">
+                 <div ng-message="required">This is required.</div>
+               </div>
+             </md-input-container>
+             <md-input-container class="md-block">
+                <label>channel Name</label>
+                <input required name="channelName" ng-model="channel.channelName">
+                <div ng-messages="channelForm.channelName.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+              <md-button ng-disabled="channelForm.$invalid" class="md-raised md-primary" aria-label="submit" ng-click="addChannel()">Submit
+              </md-button>
+              <div>
+                <md-button ng-disabled="channelForm.$invalid" class="md-raised md-primary" aria-label="New channel" ng-click="createChannel($event)">Add another channel
+                </md-button>
+                <md-button ng-disabled="channelForm.$invalid" class="md-raised md-primary" aria-label="Add people" ng-click="addUsersToChannel($event)">Add users to channel
+                </md-button>
+              </div>
+          </form>
+      </div>
+  </md-dialog-content>
+</md-dialog>

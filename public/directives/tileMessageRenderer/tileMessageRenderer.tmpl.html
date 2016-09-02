@@ -1,0 +1,61 @@
+
+  <!-- <div class="md-display-4">
+    {{messageCount}}
+  </div> -->
+  <!-- <message-card message="message" ng-click="onClickDisplayChannel(message)"></message-card> -->
+ <div>
+   <div layout="column" flex="80">
+     <div class="message" ng-repeat="message in messages" layout="row" flex="100" layout-wrap ng-click="onClickDisplayChannel(message)">
+         <div layout="column" layout-align="space-between stretch" >
+           <div class="tileUserName" ><p ng-bind="message.user"></p></div>
+           <br>
+           <div class="tileUserTime"><p ng-bind="message.time"></p></div>
+           <br>
+           <div ><p ng-bind="message.content"></p></div>
+         </div>
+     </div>
+
+   <!-- drop down -->
+  <div layout-align="end center" flex="20" class="channeldis">
+    <md-menu-bar>
+     <md-menu>
+       <!-- {{messageCount}} -->
+       <md-button aria-label="add" class="md-icon-button addc" ng-click="$mdOpenMenu()">
+        <md-icon md-svg-icon="images/add-white-24px.svg"></md-icon>
+       </md-button>
+<!--
+       <md-menu-content ng-repeat="message in tempMessages">
+         <md-menu-item >
+           <div>
+             <div class="tileUserName" ><p ng-bind="message.user"></p></div>
+             <br>
+             <div class="tileUserTime"><p ng-bind="message.time"></p></div>
+             <br>
+             <div ><p ng-bind="message.content"></p></div>
+           </div>
+         </md-menu-item>
+         <br>
+       </md-menu-content> -->
+       <md-menu-content class="channellist">
+       <div style="text-align:center;"><h3>Channels</h3></div>
+        <md-menu-divider></md-menu-divider>
+        <md-list-item class="md-3-line" ng-repeat="m in droplist" >
+          <div class="md-list-item-text" layout="row">
+            <input type="checkbox" ng-checked={{checkdrp(m.channelId)}} ng-click="click(m.channelId,checkdrp(m.channelId))" md-prevent-menu-close="md-prevent-menu-close" >
+            &nbsp;&nbsp;{{m.channelName}} 
+          </div>
+        </md-list-item>
+
+        <md-divider ></md-divider>
+        <md-list-item>
+        <button class="btn-primary" ng-click=dropbox(cha)>
+         Done</button>&nbsp;&nbsp;
+         <button class="btn-danger" ng-click=deletetile()>
+         Delete Tile</button>
+      </md-list-item>
+      </md-menu-content>
+     </md-menu>
+    </md-menu-bar>
+  </div>
+</div>
+ </div>

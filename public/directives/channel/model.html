@@ -1,0 +1,119 @@
+<md-dialog>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h1>Code Snippet</h1>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+          <md-icon md-svg-icon="images/cancel-white-24px.svg"></md-icon>
+        </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+  <div class="dialog">
+    <div layout="column" class="titleinput">
+      <md-input-container>
+        <input type="text" placeholder="Title(Optional)" />
+      </md-input-container>
+    </div>
+    <div class="ace">
+      <pre id="editor" ng-model="typedMessage">
+        function handleRequest(req,res,next) {
+          req.send();
+        }
+      </pre>
+    </div>
+    <div class="form-group">
+       <label id="floa">
+           <input checked="checked" type="checkbox">Share
+           <span id="share_context_label">with</span>
+           <input class=" form-control1" id="inputName" placeholder="Title(Optional)" type="text">
+       </label>
+    </div><br><br>
+    <div>
+       <label class="inline_block align_top" id="floaa">Add Comment
+        <br>
+        <span class="input_note normal">(optional)</span>
+       </label>
+       <textarea id="fil" class="comment_input no_bottom_margin" name="comment" tabindex="4" wrap="virtual" style="height: 66px;"></textarea>
+    </div>
+  </div>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <md-button class="btn btn-success pull-right" type="submit" ng-click="addingSnippet($event,typedMessage)">Create Snippet</md-button>&nbsp;&nbsp;
+    <md-button class="btn btn_outline cancel" type="submit" ng-click="cancel()">Cancel</md-button>
+  </md-dialog-actions>
+</md-dialog>
+
+<!-- <div class="modal fade" id="myModal">
+ <div class="md-dialog">
+   <div class="md-dialog-content">
+     <div class="modal-header">
+       <button class="close" data-dismiss="modal">&times;</button>
+
+       <h4 class="modal-title">Create Snippet</h4>
+     </div>
+     <div class="modal-body">
+
+       <form class="form-horizontal">
+         <div class="form-group">
+
+           <div class="col-lg-10">
+             <input class=" form-control" id="inputName" placeholder="Title(Optional)" type="text">
+
+           </div>
+           <div id="ace">
+             <pre id="editor">function foo(items) {
+ var i;
+ for (i = 0; i &lt; items.length; i++) {
+     alert("Ace Rocks " + items[i]);
+ }
+}</pre>
+
+
+             <script>
+               ace.require("ace/ext/language_tools");
+               var editor = ace.edit("editor");
+               editor.setTheme("ace/theme/solarized_light");
+               editor.session.setMode("ace/mode/javascript");
+               editor.setOption({
+                 enableBasicAutocompletion: true
+               });
+             </script>
+           </div>
+
+         </div>
+         <div class="form-group">
+           <label id="floa">
+             <input checked="checked" type="checkbox">Share
+             <span id="share_context_label">
+       with
+     </span>
+             <input class=" form-control1" id="inputName" placeholder="Title(Optional)" type="text">
+           </label>
+
+
+
+           <div class="col-lg-10">
+
+
+           </div>
+         </div>
+
+       </form>
+       <label class="inline_block align_top" id="floaa">
+         Add Comment
+         <br>
+         <span class="input_note normal">(optional)</span>
+       </label>
+       <textarea id="fil" class="comment_input no_bottom_margin" name="comment" tabindex="4" wrap="virtual" style="height: 66px;"></textarea>
+     </div>
+     <div class="modal-footer">
+
+
+       <button class="btn btn-success pull-right" type="submit">Create Snippet</button>
+       <button class="btn btn_outline cancel" type="submit">Cancel</button>
+     </div>
+
+   </div>
+ </div>
+</div> -->

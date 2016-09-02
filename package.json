@@ -1,0 +1,20 @@
+{
+  "name": "troupe-remake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.219.93.7:81/mkrishnateja07/troupe-remake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.74.0",
+    "socket.io": "^1.4.8"
+  }
+}

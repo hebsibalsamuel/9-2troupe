@@ -1,0 +1,49 @@
+<md-dialog>
+  <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Tile Content Editing</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+          <md-icon md-svg-icon="images/cancel-white-24px.svg"></md-icon>
+        </md-button>
+      </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="tileform">
+      <form name="tileForm">
+        <md-input-container class="md-block">
+          <label>Tile Name</label>
+            <input ng-model="sample.tname">
+            <div ng-messages="tileForm.tile.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+
+       <md-input-container>
+        <label>Size</label>
+        <md-select ng-model="sample.size" required>
+          <md-option ng-repeat="x in ['Small','Medium','Large']">{{x}}</md-option>
+        </md-select>
+        <div ng-messages="tileForm.tileWidth.$error">
+          <div ng-message="required">Size of tile.</div>
+        </div>
+       </md-input-container>
+       <br><br>
+
+       <md-input-container style="margin-right: 10px;">
+         <label>colors</label>
+         <md-select ng-model="sample.color" class="inlineblock" required>
+          <md-option ng-repeat="c in colors " class="inline_color_block" style="background:{{c}}">{{c}}</md-option>
+         </md-select>
+         <div ng-messages="tileForm.col.$error">
+           <div ng-message="required">Color.</div>
+         </div>
+       </md-input-container>
+
+       <br><br>
+       <md-button class="md-primary md-raised" ng-click="edittile(sample.tname,sample.size,sample.color)" > Submit
+       </md-button>
+    </form>
+   </div>
+  </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,57 @@
+<md-dialog aria-label="Create New project" ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Create New project</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+          <md-icon md-svg-icon="images/cancel-white-24px.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <form name="projectForm">
+          <md-input-container class="md-block">
+            <label>Project Name</label>
+            <input required name="projectName" ng-model="project.projectName">
+            <div ng-messages="projectForm.projectName.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Description</label>
+            <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+            <div ng-messages="projectForm.description.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Git Username</label>
+            <input required name="gitUserName" ng-model="project.gitUserName">
+            <div ng-messages="projectForm.gitUserName.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Git Repository Name</label>
+            <input required name="gitRepoName" ng-model="project.gitRepoName">
+            <div ng-messages="projectForm.gitrepoName.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Access Token</label>
+            <input required name="accessToken" ng-model="project.accessToken">
+            <div ng-messages="projectForm.accessToken.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-button ng-disabled="projectForm.$invalid" class="md-raised md-primary" aria-label="project" ng-click="create();Invite($event);">Create
+          </md-button>
+          <!-- <md-button class="md-raised md-primary" aria-label="Add users" ng-click="">Invite New Mewmbers
+          </md-button> -->
+        </form>
+      </div>
+  </md-dialog-content>
+</md-dialog>

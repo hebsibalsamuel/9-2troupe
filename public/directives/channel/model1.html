@@ -1,0 +1,166 @@
+<div id="snippet_dialog" class="modal hide fade in" data-backdrop="static" data-keyboard="false" aria-hidden="false">	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3>Create snippet</h3>
+	</div>
+	<div class="modal-body share_dialog">
+
+		<form action="" id="client_file_snippet" method="post" accept-encoding="UTF-8" onsubmit="return false;" class="no_bottom_margin">
+
+			<p>
+				<label id="client_file_snippet_select_label" class="select small float_right no_right_padding">
+					<select name="filetype" id="client_file_snippet_select" class="small no_top_margin">
+						<option value="auto">Auto Detect Type</option>
+							<option value="text">Plain Text</option>
+							<option value="-">-</option>
+							<option value="applescript">AppleScript</option>
+							<option value="boxnote">BoxNote</option>
+							<option value="c">C</option>
+							<option value="csharp">C#</option>
+							<option value="cpp">C++</option>
+							<option value="css">CSS</option>
+							<option value="csv">CSV</option>
+							<option value="clojure">Clojure</option>
+							<option value="coffeescript">CoffeeScript</option>
+							<option value="cfm">Cold Fusion</option>
+							<option value="crystal">Crystal</option>
+							<option value="cypher">Cypher</option>
+							<option value="d">D</option>
+							<option value="dart">Dart</option>
+							<option value="diff">Diff</option>
+							<option value="dockerfile">Docker</option>
+							<option value="erlang">Erlang</option>
+							<option value="fsharp">F#</option>
+							<option value="fortran">Fortran</option>
+							<option value="gherkin">Gherkin</option>
+							<option value="go">Go</option>
+							<option value="groovy">Groovy</option>
+							<option value="html">HTML</option>
+							<option value="handlebars">Handlebars</option>
+							<option value="haskell">Haskell</option>
+							<option value="haxe">Haxe</option>
+							<option value="java">Java</option>
+							<option value="javascript">JavaScript/JSON</option>
+							<option value="julia">Julia</option>
+							<option value="kotlin">Kotlin</option>
+							<option value="latex">LaTeX/sTeX</option>
+							<option value="lisp">Lisp</option>
+							<option value="lua">Lua</option>
+							<option value="matlab">MATLAB</option>
+							<option value="mumps">MUMPS</option>
+							<option value="markdown">Markdown (raw)</option>
+							<option value="ocaml">OCaml</option>
+							<option value="objc">Objective-C</option>
+							<option value="php">PHP</option>
+							<option value="pascal">Pascal</option>
+							<option value="perl">Perl</option>
+							<option value="pig">Pig</option>
+							<option value="post">Post</option>
+							<option value="powershell">Powershell</option>
+							<option value="puppet">Puppet</option>
+							<option value="python">Python</option>
+							<option value="r">R</option>
+							<option value="ruby">Ruby</option>
+							<option value="rust">Rust</option>
+							<option value="sql">SQL</option>
+							<option value="sass">Sass</option>
+							<option value="scala">Scala</option>
+							<option value="scheme">Scheme</option>
+							<option value="shell">Shell</option>
+							<option value="smalltalk">Smalltalk</option>
+							<option value="swift">Swift</option>
+							<option value="tsv">TSV</option>
+							<option value="vb">VB.NET</option>
+							<option value="vbscript">VBScript</option>
+							<option value="velocity">Velocity</option>
+							<option value="verilog">Verilog</option>
+							<option value="xml">XML</option>
+							<option value="yaml">YAML</option>
+					</select>
+				</label>
+				<input type="text" id="client_file_snippet_title_input" class="small" name="client_file_snippet_title_input" value="" placeholder="Title (optional)">
+			</p>
+			<p>
+				<textarea name="content" wrap="virtual" id="client_file_snippet_textarea" class="client_file_snippet_textarea full_width create_snippet" style="display: none;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 31px; margin-bottom: -17px; border-right-width: 13px; min-height: 22px; min-width: 7px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 14px;">&nbsp;</div></div><div class="CodeMirror-code"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -31px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="height: 35px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+				<label class="checkbox normal mini float_right no_min_width" style="margin-top: 3px; padding-right: 0; width: auto;">
+					<input type="checkbox" id="client_file_wrap_cb"> wrap
+				</label>
+			</p>
+
+				<div id="file_sharing_div">
+
+		<div class="small_bottom_margin">
+			<input type="hidden" id="share_model_ob_id" value="U1P4UEQQ0">
+			<label for="share_cb" class=" small_bottom_margin">
+				<input id="share_cb" checked="checked" name="share_cb" type="checkbox" class="no_top_margin small_right_margin " tabindex="2">Share
+				<span id="share_context_label">
+					with
+				</span>
+			</label>
+
+			<div id="select_share_channels" class="file_share_select inline_block no_margin" style="width: 60%;"><div class="lazy_filter_select default_style single value"><div class="lfs_input_container empty">
+	<ts-icon class="ts_icon_search ts_icon search_icon subtle_silver"></ts-icon>
+	<div class="lfs_value"><div class="lfs_item  selected single" data-lfs-id="1.23">			<span data-member-presence="U1P4UEQQ0" class="presence active member_presence_U1P4UEQQ0" title="active"><i aria-hidden="true" class="ts_icon ts_icon_presence presence_icon"></i></span>umesh</div></div>
+	<input type="text" class="lfs_input" size="1" placeholder="Search">
+</div>
+<div class="lfs_list_container">
+	<div class="lfs_list"></div>
+</div>
+<div class="lfs_empty hidden"></div>
+</div></div>
+
+			
+
+			<span id="select_share_channels_note" class="modal_input_note hidden">
+					Files are private until they are shared in a public channel.
+				<span id="select_share_channels_join_note" class="hidden"><br><b>NOTE:</b> you will join this channel when you share the file into it.</span>
+			</span>
+
+			<span id="select_share_ims_note" class="modal_input_note ">
+					This file will be private; the person you're sharing with will be able to see it.
+			</span>
+
+			<span id="select_share_mpims_note" class="modal_input_note hidden">
+					This file will be private; the members of the conversation you're sharing with will be able to see it.
+			</span>
+
+			<span id="select_share_groups_note" class="modal_input_note hidden">
+					This file will be private; the members of the private channel you're sharing in will be able to see it.
+			</span>
+
+
+		</div>
+
+
+		<p class="no_bottom_margin">
+			<label class="inline_block align_top">
+				Add Comment <br>
+				<span class="input_note normal">(optional)</span>
+			</label>
+			<textarea id="file_comment_textarea" class="comment_input no_bottom_margin" name="comment" tabindex="4" wrap="virtual" style="height: 66px;"></textarea>
+			<span id="select_share_at_channel_blocked_note" class="modal_input_note indifferent_grey hidden"></span>
+			<span id="select_share_at_channel_note" class="modal_input_note indifferent_grey hidden"></span>
+		</p>
+	</div>
+
+
+		</form>
+
+	</div>
+
+	<div class="modal-footer">
+		<div class="modal-footer-confirm hidden">
+			<p class="confirm-text">
+					Are you sure you want to discard this snippet permanently?
+			</p>
+			<button type="button" class="btn btn_outline dialog_cancel_decline">No, keep it</button>
+			<button type="button" class="btn btn_danger dialog_cancel">
+					Yes, discard this snippet
+			</button>
+		</div>
+		<div class="modal-footer-action">
+			<a class="btn btn_outline cancel" data-dismiss="modal" tabindex="3">Cancel</a>
+			<a class="btn dialog_go" tabindex="2">Create Snippet</a>
+		</div>
+	</div>
+
+</div>

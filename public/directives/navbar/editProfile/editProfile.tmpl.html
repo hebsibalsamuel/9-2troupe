@@ -1,0 +1,31 @@
+  <div layout="column" flex="100" layout-align="center">
+  <div flex="100" >
+     <md-card flex="100">
+      <md-card-header class="header" >
+        <img ng-src="images/background.jpg">
+    </md-card-header>
+       <md-card-content>
+         <md-nav-bar nav-bar-aria-label="navigation links">
+
+           <md-card-avatar class="userImage">
+             {{user.image}}
+             <img src="images/{{user.image}}" class="md-user-avatar" alt="user avatar">
+           </md-card-avatar>
+           <ul class="nav navbar-nav" layout="row" layout-padding layout-align="space-around center">
+        <li class="inline"><a ui-sref=".viewProfile" class="underline">profile</a></li>
+        <li class="inline"><a ui-sref=".projectManage" class="underline">projects</a></li>
+        <li class="inline"><a ui-sref=".privacy" class="underline">privacy</a></li>
+      </ul>
+    </md-nav-bar>
+  </md-card-content>
+
+</md-card>
+<div flex="100">
+<md-card layout-align="center center">
+        <div layout="column" class="text">
+        <div ui-view></div>
+      </div>
+    </md-card>
+</div>
+ </div>
+</div>
