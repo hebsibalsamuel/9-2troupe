@@ -5,7 +5,7 @@ angular.module('troupe',['ngMaterial','ui.router','luegg.directives','ngAnimate'
     $rootScope.msg=[];
     var username = $location.$$absUrl.split('=')[1];
     username = username.substring(0,username.length-2);
-    $http.get('http://10.219.93.3:3000/users?username='+username).success(function(user) {
+    $http.get('http://localhost:3000/users?username='+username).success(function(user) {
       $rootScope.tiles = user[0].tile;
       // console.log(  $rootScope.tiles);
       $rootScope.userName = user[0].username;

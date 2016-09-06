@@ -11,7 +11,7 @@ angular.module('troupe')
 
 
       var check=function(a,b) {
-   $http.get("http://10.219.93.3:8080/file/"+b)
+   $http.get("http://localhost:3000/file/"+b)
      .then(function(response) {
        //console.log(response.data);
          $scope.messages[a]["content"]=response.data;

@@ -41,8 +41,9 @@ md-grid-tile {
 
 .message-list {
  min-height: 400px;
- max-height: 450px;
+ max-height: 400px;
  overflow-y: auto;
+
 }
 
 .grid-list{

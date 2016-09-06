@@ -52,7 +52,7 @@ var app1=angular.module('troupe')
                                        var h =JSON.stringify($scope.tileObj2);
 
                                        console.log(h);
-                                       $http.patch("http://10.219.93.3:3000/tiles/"+ids, h).
+                                       $http.patch("http://localhost:3000//tiles/"+ids, h).
                                        success(function(data, status, headers, config) {
                                           console.log("data");
                                           //$window.location.reload();
@@ -77,44 +77,40 @@ var app1=angular.module('troupe')
       // var h =JSON.stringify($scope.msg);
       // console.log(h);
 
-      $http.get("http://10.219.93.3:3000/tiles/")
-      .then(function(response) {
-        console.log("Response data:" + response.data);
-        $scope.tilelength =response.data.length;
-        console.log($scope.tilelength);
-        for (var i = 0; i < $scope.tilelength; i++)
-        {
-          $scope.tiles_id[i] = response.data[i].id;
-        }
-        console.log($scope.tiles_id);
-        for (var i = 0; i < $scope.tilelength; i++)
-        {
-          console.log($scope.tiles_id[i]);
-          $http.delete("http://10.219.93.3:3000/tiles/"+$scope.tiles_id[i])
-           .then(function(response) {
-             console.log($scope.tiles_id[i]);
-             console.log("inside delete");
-           }, function(response) {
-           $scope.content = "Something went wrong";
-           });
-        }
-        // for (var j = 0; j < $scope.msg.length; j++)
-        // {
-        //   console.log($scope.msg.length);
-        //  $http.post("http://10.219.93.3:3000/tiles/",$scope.msg[0] )
-        //   .then(function(response){
-        //          console.log($scope.msg.length);
-        //    },function(response){
-        //      $scope.content = "Something went wrong";
-        //    });
-         //
-        //    $http.post("http://10.219.93.3:3000/tiles/",$scope.msg[1] )
-        //     .then(function(response){
-        //            console.log($scope.msg.length);
-        //      },function(response){
-        //        $scope.content = "Something went wrong";
-        //      });
-        // }
-    });
+    //   $http.get("http://localhost:3000/tiles/")
+    //   .then(function(response) {
+    //     console.log("Response data:" + response.data);
+    //     $scope.tilelength =response.data.length;
+    //     console.log($scope.tilelength);
+    //     for (var i = 0; i < $scope.tilelength; i++)
+    //     {
+    //       $scope.tiles_id[i] = response.data[i].id;
+    //     }
+    //     console.log($scope.tiles_id);
+    //     for (var i = 0; i < $scope.tilelength; i++)
+    //     {
+    //       console.log($scope.tiles_id[i]);
+    //       $http.delete("http://localhost:3000/tiles/"+$scope.tiles_id[i])
+    //        .then(function(response) {
+    //          console.log($scope.tiles_id[i]);
+    //          console.log("inside delete");
+    //        }, function(response) {
+    //        $scope.content = "Something went wrong";
+    //        });
+    //     }
+    //
+    //
+    //     for (var j = 0; j < $scope.msg.length; j++)
+    //     {
+    //       console.log($scope.msg.length);
+    //      $http.post("http://localhost:3000/tiles/",$scope.msg[j] )
+    //       .then(function(response){
+    //              console.log($scope.msg.length);
+    //        },function(response){
+    //          $scope.content = "Something went wrong";
+    //        });
+    //
+    //     }
+    // });
   }
 }

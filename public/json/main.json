@@ -1997,63 +1997,25 @@
   "tiles": [
     {
       "channelid": [
-        3101
+        3101,
+        3102
       ],
-      "tileName": "Tile1",
-      "row": 2,
-      "column": 2,
-      "colour": "Aquamarine",
-      "id": 1
+      "tileName": "t2",
+      "row": 3,
+      "column": 3,
+      "colour": "Crimson",
+      "id": 6
     },
     {
       "channelid": [
+        3101,
         3102
       ],
-      "tileName": "Tile2",
-      "row": 2,
-      "column": 2,
-      "colour": "Coral",
-      "id": 2
-    },
-    {
-      "channelid": [],
-      "tileName": "Important stuff",
+      "tileName": "hebsi",
       "row": 3,
       "column": 3,
-      "colour": "Khaki",
-      "id": 7
-    },
-    {
-      "channelid": [],
-      "tileName": "Ramghassan",
-      "row": 3,
-      "column": 3,
-      "colour": "Aqua",
+      "colour": "Aquamarine",
       "id": 8
-    },
-    {
-      "channelid": [],
-      "tileName": "Ramghassan",
-      "row": 3,
-      "column": 3,
-      "colour": "Aqua",
-      "id": 9
-    },
-    {
-      "channelid": [],
-      "tileName": "hello",
-      "row": 2,
-      "column": 3,
-      "colour": "Yellow",
-      "id": 10
-    },
-    {
-      "channelid": [],
-      "tileName": "hepsi",
-      "row": 3,
-      "column": 3,
-      "colour": "Aqua",
-      "id": 11
     }
   ],
   "channelMsg": [

@@ -1,5 +1,5 @@
 angular.module('troupe')
-  .controller('tileMessageRendererCtrl', function($window,$rootScope,$timeout,$scope,messageRouter,$interval,$http) {
+  .controller('tileMessageRendererCtrl', function($window,navbarNewTile,$rootScope,$timeout,$scope,messageRouter,$interval,$http) {
     $scope.channels = [];
     $scope.obj = {};
     $scope.messages = [];
@@ -98,7 +98,7 @@ $scope.dropbox=function()
    $scope.drop.channelid=$scope.tilechan;
    var h =JSON.stringify($scope.drop);
 
-  $http.patch("http://10.219.93.3:3000/tiles/"+$scope.tileName, h).
+  $http.patch("http://localhost:3000/tiles/"+$scope.tileName, h).
   success(function(data, status, headers, config) {
          console.log("done");
          //console.log(checkvalue[i]+" "+tileName);
@@ -112,15 +112,15 @@ $scope.dropbox=function()
 
 $scope.deletetile=function(){
   //console.log(tileName);
-  $http.delete("http://10.219.93.3:3000/tiles/"+$scope.tileName)
+  $http.delete("http://localhost:3000/tiles/"+$scope.tileName)
    .then(function(response) {
 
    $scope.tileobj = response.data;
    console.log($scope.tileobj.length);
 
 //
-$http.get("http://10.219.93.3:3000/tiles")
-  .then(function(response) {
+navbarNewTile.newTile().then(function(response)
+{
   $rootScope.msg = response.data;  //First function handles success
   }, function(response) {
   $scope.content = "Something went wrong";   //Second function handles error
@@ -130,8 +130,8 @@ $http.get("http://10.219.93.3:3000/tiles")
  });
 }
 
-$http.get("http://10.219.93.3:3000/channelsdrop")
-    .then(function(a) {
+navbarNewTile.newChannelDrop().then(function(a)
+{
      //First function handles success
      $scope.droplist = a.data;
       //console.log($scope.msg.channel[0].name1);

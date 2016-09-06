@@ -1,7 +1,7 @@
 angular.module('troupe')
   .controller('navbarCtrl',navbarCtrl);
 
-  function navbarCtrl($scope,$mdDialog,$mdMedia,project,$http,$rootScope) {
+  function navbarCtrl($scope,$mdDialog,$mdMedia,project,$http,$rootScope,navbarNewTile) {
     $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
     //function to create project
     $scope.createProject = function(ev) {
@@ -58,8 +58,11 @@ angular.module('troupe')
      //Function for Creating a tile
 
 $scope.colors = ["AntiqueWhite","Aqua","Aquamarine","Beige","Bisque","BlanchedAlmond","BurlyWood","CadetBlue","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkCyan","DarkSalmon","DarkSeaGreen","DarkTurquoise","DeepSkyBlue","FloralWhite","Gainsboro","GhostWhite","Gold","GoldenRod","Grey","GreenYellow","HoneyDew","HotPink","IndianRed","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGrey","LightSteelBlue","LightYellow","LimeGreen","Linen","MediumAquaMarine","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MintCream","MistyRose","Moccasin","NavajoWhite","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Salmon","SandyBrown","SeaGreen","SeaShell","Silver","SkyBlue","SlateBlue","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","YellowGreen"];
-     $http.get("http://10.219.93.3:3000/tiles")
-     .then(function(response) {
+
+//newTile service 1
+    navbarNewTile.newTile().then(function(response)
+    {
+       console.log("inside service");
        $rootScope.msg = response.data;  //First function handles success
      }, function(response) {
        $scope.content = "Something went wrong";   //Second function handles error
@@ -97,12 +100,25 @@ $scope.colors = ["AntiqueWhite","Aqua","Aquamarine","Beige","Bisque","BlanchedAl
                                         $scope.tileObj.colour=tileColor;
                                         console.log($scope.tileObj);
                                         var h =JSON.stringify($scope.tileObj);
-                                        $http.post("http://10.219.93.3:3000/tiles", h).
-                                        success(function(data, status, headers, config) {
+
+                                        // navbarNewTile.newTilePosting(h).success(function(data, status, headers, config)
+                                        //  {
+                                        //   $rootScope.msg.push($scope.tileObj);
+                                        //   console.log($rootScope.msg);
+                                        // }).
+                                        // error(function(data, status, headers, config) {
+                                        //
+                                        //   console.log("error");
+                                        // });
+                                        $http.patch('http://localhost:3000/tiles',h).success(function(data, status, headers, config)
+                                         {
                                           $rootScope.msg.push($scope.tileObj);
                                           console.log($rootScope.msg);
                                         }).
-                                        error(function(data, status, headers, config) {});
+                                        error(function(data, status, headers, config) {
+
+                                          console.log("error");
+                                        });
 
                                         $mdDialog.hide();
                                       }
